@@ -11,7 +11,8 @@
     </div>
     <div id="carousel-indicators" class="carousel slide" data-ride="carousel" data-interval="false">
       <ol class="carousel-indicators">
-        <li *ngFor="let image of selectedProject.images" data-target="#carousel-indicators" [attr.data-slide-to]="selectedProject.images.indexOf(image)" [ngClass]="{'active' : selectedProject.images.indexOf(image)==0}"></li>
+        <li *ngFor="let image of selectedProject.images" data-target="#carousel-indicators" [attr.data-slide-to]="selectedProject.images.indexOf(image)"
+          [ngClass]="{'active' : selectedProject.images.indexOf(image)==0}"></li>
       </ol>
       <div class="carousel-inner">
         <div *ngFor="let image of selectedProject.images" class="carousel-item" [ngClass]="{'active' : selectedProject.images.indexOf(image)==0}">
@@ -28,5 +29,11 @@
       </a>
     </div>
   </div>
-  <button *ngFor="let project of projects" (click)="setSelectedProject(project)" type="button" class="btn btn-dark">{{project.title}}</button>
+</div>
+<div class="container full-width-container">
+  <div class="row all-miniatures-wrapper">
+    <div *ngFor="let project of projects" (click)="setSelectedProject(project)" class="col-3 col-md-2 image-miniature-wrapper">
+      <img [src]="project.imageMiniature.location" alt="{{project.title}}" class="image-miniature" [ngClass]="{'image-miniature-active' : isSelectedProject(project)}">
+    </div>
+  </div>
 </div>

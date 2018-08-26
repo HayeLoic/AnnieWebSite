@@ -21,6 +21,7 @@ export class ThreeDWorkComponent implements OnInit {
   prepareProjects(projects: Project[]): Project[] {
     for (let project of projects) {
       project = this.setImageLocation(project);
+      project.imageMiniature.location = project.repository + project.imageMiniature.fileName;
     }
     return projects;
   }
@@ -31,6 +32,10 @@ export class ThreeDWorkComponent implements OnInit {
 
   sortProjectsById(projects: Project[]): Project[] {
     return projects.sort(function (a, b) { return (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0); });
+  }
+
+  isSelectedProject(project: Project): boolean {
+    return this.selectedProject == project;
   }
 
   constructor() { }
