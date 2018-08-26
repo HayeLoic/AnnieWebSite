@@ -2,13 +2,14 @@
   <h2>
     Personnal and professional 3D work
   </h2>
-  <h4>
-    {{category.title}}
-  </h4>
-  <div>
-    {{category.description}}
-  </div>
-  <div id="carousel-indicators" class="carousel slide" data-ride="carousel" data-interval="false">
+  <div *ngIf="selectedCategory">
+    <h4>
+      {{category.title}}
+    </h4>
+    <div>
+      {{category.description}}
+    </div>
+    <div id="carousel-indicators" class="carousel slide" data-ride="carousel" data-interval="false">
       <ol class="carousel-indicators">
         <li *ngFor="let image of category.images" data-target="#carousel-indicators" [attr.data-slide-to]="image.id-1" [ngClass]="{'active' : image.id==1}"></li>
       </ol>
@@ -26,4 +27,6 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+  </div>
+  <button *ngFor="let category of categories" (click)="setSelectedCategory(category)" type="button" class="btn btn-dark">{{category.title}}</button>
 </div>

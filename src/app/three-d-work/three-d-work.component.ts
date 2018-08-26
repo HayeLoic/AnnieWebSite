@@ -47,16 +47,30 @@ export class ThreeDWorkComponent implements OnInit {
     ]
   }
 
+  categories = [this.category];
+  selectedCategory = null;
+
   setImageLocation(category: Category): Category {
     for (let image of category.images) {
-        image.location = category.repository+ image.fileName;
+      image.location = category.repository + image.fileName;
     }
     return category;
+  }
+
+  prepareCategories(categories: Category[]): Category[] {
+    for (let category of categories) {
+      category = this.setImageLocation(category);
+    }
+    return categories;
+  }
+
+  setSelectedCategory(category: Category): void {
+    this.selectedCategory = category;
   }
 
   constructor() { }
 
   ngOnInit() {
-    this.setImageLocation(this.category);
+    this.prepareCategories(this.categories);
   }
 }
