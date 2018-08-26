@@ -1,3 +1,9 @@
+body{
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    font-family: 'Raleway', 'Calibri'
+}
+
 .page-container{
     margin-top: 10px;
 }
