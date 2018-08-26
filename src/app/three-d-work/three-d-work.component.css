@@ -1,0 +1,23 @@
+.carousel-custom-img {
+    max-height: 720px;
+    object-fit: contain;
+}
+
+.image-miniature {
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.image-miniature-wrapper {
+    padding: 0;
+}
+
+.all-miniatures-wrapper {
+    margin-top: 15px;
+     margin-bottom: 15px;
+}
+
+.image-miniature-active {
+    filter: opacity(35%);
+}
