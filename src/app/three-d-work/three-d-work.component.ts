@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from './project'
-import { Image } from './image';
+import { ProjectsSettings } from './projects-settings';
 
 @Component({
   selector: 'app-three-d-work',
@@ -8,46 +8,7 @@ import { Image } from './image';
   styleUrls: ['./three-d-work.component.css']
 })
 export class ThreeDWorkComponent implements OnInit {
-  project: Project = {
-    id: 1,
-    title: 'Scale',
-    description: 'This is scale.',
-    repository: '../../assets/three-d-work/Scale/',
-    images: [
-      new Image({
-        id: 1,
-        fileName: 'Render_0200.png',
-        location: null
-      }),
-      new Image({
-        id: 2,
-        fileName: 'Render_0378.png',
-        location: null
-      }),
-      new Image({
-        id: 3,
-        fileName: 'scale01.jpg',
-        location: null
-      }),
-      new Image({
-        id: 4,
-        fileName: 'scale02.jpg',
-        location: null
-      }),
-      new Image({
-        id: 5,
-        fileName: 'scale03.jpg',
-        location: null
-      }),
-      new Image({
-        id: 6,
-        fileName: 'vlcsnap-2014-07-25-00h18m21s0.png',
-        location: null
-      }),
-    ]
-  }
-
-  projects = [this.project];
+  projects = null;
   selectedProject = null;
 
   setImageLocation(project: Project): Project {
@@ -71,6 +32,7 @@ export class ThreeDWorkComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.projects = ProjectsSettings.GetProjects();
     this.prepareProjects(this.projects);
   }
 }

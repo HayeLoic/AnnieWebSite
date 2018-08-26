@@ -4,17 +4,17 @@
   </h2>
   <div *ngIf="selectedProject">
     <h4>
-      {{project.title}}
+      {{selectedProject.title}}
     </h4>
     <div>
-      {{project.description}}
+      {{selectedProject.description}}
     </div>
     <div id="carousel-indicators" class="carousel slide" data-ride="carousel" data-interval="false">
       <ol class="carousel-indicators">
-        <li *ngFor="let image of project.images" data-target="#carousel-indicators" [attr.data-slide-to]="image.id-1" [ngClass]="{'active' : image.id==1}"></li>
+        <li *ngFor="let image of selectedProject.images" data-target="#carousel-indicators" [attr.data-slide-to]="selectedProject.images.indexOf(image)" [ngClass]="{'active' : selectedProject.images.indexOf(image)==0}"></li>
       </ol>
       <div class="carousel-inner">
-        <div *ngFor="let image of project.images" class="carousel-item" [ngClass]="{'active' : image.id==1}">
+        <div *ngFor="let image of selectedProject.images" class="carousel-item" [ngClass]="{'active' : selectedProject.images.indexOf(image)==0}">
           <img class="d-block w-100" [src]="image.location" alt="First slide">
         </div>
       </div>
