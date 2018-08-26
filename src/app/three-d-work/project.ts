@@ -1,6 +1,6 @@
 import { Image } from "./image";
 
-export class Category {
+export class Project {
     id: number;
     title: string;
     description: string;

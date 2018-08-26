@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Category } from '../three-d-work/category'
+import { Project } from './project'
 import { Image } from './image';
 
 @Component({
@@ -8,7 +8,7 @@ import { Image } from './image';
   styleUrls: ['./three-d-work.component.css']
 })
 export class ThreeDWorkComponent implements OnInit {
-  category: Category = {
+  project: Project = {
     id: 1,
     title: 'Scale',
     description: 'This is scale.',
@@ -47,30 +47,30 @@ export class ThreeDWorkComponent implements OnInit {
     ]
   }
 
-  categories = [this.category];
-  selectedCategory = null;
+  projects = [this.project];
+  selectedProject = null;
 
-  setImageLocation(category: Category): Category {
-    for (let image of category.images) {
-      image.location = category.repository + image.fileName;
+  setImageLocation(project: Project): Project {
+    for (let image of project.images) {
+      image.location = project.repository + image.fileName;
     }
-    return category;
+    return project;
   }
 
-  prepareCategories(categories: Category[]): Category[] {
-    for (let category of categories) {
-      category = this.setImageLocation(category);
+  prepareProjects(projects: Project[]): Project[] {
+    for (let project of projects) {
+      project = this.setImageLocation(project);
     }
-    return categories;
+    return projects;
   }
 
-  setSelectedCategory(category: Category): void {
-    this.selectedCategory = category;
+  setSelectedProject(project: Project): void {
+    this.selectedProject = project;
   }
 
   constructor() { }
 
   ngOnInit() {
-    this.prepareCategories(this.categories);
+    this.prepareProjects(this.projects);
   }
 }
