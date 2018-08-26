@@ -29,10 +29,15 @@ export class ThreeDWorkComponent implements OnInit {
     this.selectedProject = project;
   }
 
+  sortProjectsById(projects: Project[]): Project[] {
+    return projects.sort(function (a, b) { return (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0); });
+  }
+
   constructor() { }
 
   ngOnInit() {
     this.projects = ProjectsSettings.GetProjects();
+    this.projects = this.sortProjectsById(this.projects);
     this.prepareProjects(this.projects);
   }
 }
