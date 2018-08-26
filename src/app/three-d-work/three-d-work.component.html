@@ -15,7 +15,7 @@
       </ol>
       <div class="carousel-inner">
         <div *ngFor="let image of selectedProject.images" class="carousel-item" [ngClass]="{'active' : selectedProject.images.indexOf(image)==0}">
-          <img class="d-block w-100" [src]="image.location" alt="First slide">
+          <img class="d-block w-100 carousel-custom-img" [src]="image.location" alt="First slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carousel-indicators" role="button" data-slide="prev">

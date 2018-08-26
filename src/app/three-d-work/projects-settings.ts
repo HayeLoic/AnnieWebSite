@@ -46,12 +46,13 @@ export class ProjectsSettings {
             }),
             new Project({
                 id: 3,
-                title: 'LaOuTuEs',
-                description: 'This is LaOuTuEs.',
+                title: 'Là Où Tu Es',
+                description: 'This is Là Où Tu Es.',
                 repository: '../../assets/three-d-work/LaOuTuEs/',
                 images: [
-                    new Image({ fileName: 'Arbres_02.png' }),
-                    new Image({ fileName: 'Cafe_Fille_02.png' })
+                    new Image({ fileName: 'la_ou_tu_es01.jpg' }),
+                    new Image({ fileName: 'la_ou_tu_es02.jpg' }),
+                    new Image({ fileName: 'la_ou_tu_es03.jpg' })
                 ]
             })
         ];
