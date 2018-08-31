@@ -1,0 +1,13 @@
+.photography-image {
+    max-height: 200px;
+    margin: 5px;
+}
+
+.photography-image:hover {
+    cursor: pointer;
+}
+
+.photographies-wrapper {
+    max-width: 100%;
+    text-align: center;
+}

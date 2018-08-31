@@ -1,0 +1,5 @@
+<div class="container">
+  <div class="photographies-wrapper">
+    <img *ngFor="let photography of photographies" [src]="photography.location" alt="{{photography.fileName}}" class="photography-image">
+  </div>
+</div>
