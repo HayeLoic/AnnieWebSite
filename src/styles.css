@@ -16,47 +16,14 @@ body{
     filter: opacity(35%);
 }
 
-@keyframes blowUpContent {
-    0% {
-      transform:scale(1);
-      opacity:1;
-    }
-    99.9% {
-      transform:scale(2);
-      opacity:0;
-    }
-    100% {
-      transform:scale(0);
-    }
-  }
-  
-  @keyframes blowUpContentTwo {
-    0% {
-      transform:scale(2);
-      opacity:0;
-    }
-    100% {
-      transform:scale(1);
-      opacity:1;
-    }
-  }
-  
-  @keyframes blowUpModal {
-    0% {
-      transform:scale(0);
-    }
-    100% {
-      transform:scale(1);
-    }
-  }
-  
-  @keyframes blowUpModalTwo {
-    0% {
-      transform:scale(1);
-      opacity:1;
-    }
-    100% {
-      transform:scale(0);
-      opacity:0;
-    }
-  }
+.modal.fade
+.modal-dialog {
+   -webkit-transform: translate(0);
+   -moz-transform: translate(0);
+   transform: translate(0);
+}
+
+.custom-fade {
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
