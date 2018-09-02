@@ -15,9 +15,5 @@
 
 .all-miniatures-wrapper {
     margin-top: 15px;
-     margin-bottom: 15px;
-}
-
-.image-miniature-active {
-    filter: opacity(35%);
+    margin-bottom: 15px;
 }

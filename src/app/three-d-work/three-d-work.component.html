@@ -33,7 +33,8 @@
 <div class="container full-width-container">
   <div class="row all-miniatures-wrapper">
     <div *ngFor="let project of projects" (click)="setSelectedProject(project)" class="col-3 col-md-2 image-miniature-wrapper">
-      <img [src]="project.imageMiniature.location" alt="{{project.title}}" class="image-miniature" [ngClass]="{'image-miniature-active' : isSelectedProject(project)}">
+      <img [src]="project.imageMiniature.location" alt="{{project.title}}" class="image-miniature" [ngClass]="{'image-miniature-active' : isSelectedOrHoveredProject(project)}"
+      [ngClass]="{'image-miniature-active' : isSelectedOrHoveredProject(project)}" (mouseover)="setHoveredProject(project)" (mouseout)="setHoveredProject(null)">
     </div>
   </div>
 </div>
