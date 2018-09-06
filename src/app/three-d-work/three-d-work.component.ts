@@ -10,6 +10,7 @@ import { ProjectsSettings } from './projects-settings';
 export class ThreeDWorkComponent implements OnInit {
   projects = null;
   selectedProject = null;
+  hoveredProject = null;
 
   setImageLocation(project: Project): Project {
     for (let image of project.images) {
@@ -34,8 +35,12 @@ export class ThreeDWorkComponent implements OnInit {
     return projects.sort(function (a, b) { return (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0); });
   }
 
-  isSelectedProject(project: Project): boolean {
-    return this.selectedProject == project;
+  setHoveredProject(project: Project): void {
+    this.hoveredProject = project;
+  }
+
+  isSelectedOrHoveredProject(project: Project): boolean {
+    return this.selectedProject == project || this.hoveredProject == project;;
   }
 
   constructor() { }

@@ -1,5 +1,5 @@
 import { Project } from './project'
-import { Image } from './image';
+import { Image } from '../image/image';
 
 export class ProjectsSettings {
     public static GetProjects() {

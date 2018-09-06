@@ -11,3 +11,19 @@ body{
 .full-width-container {
     max-width: 100%;
 }
+
+.image-miniature-active {
+    filter: opacity(35%);
+}
+
+.modal.fade
+.modal-dialog {
+   -webkit-transform: translate(0);
+   -moz-transform: translate(0);
+   transform: translate(0);
+}
+
+.custom-fade {
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}

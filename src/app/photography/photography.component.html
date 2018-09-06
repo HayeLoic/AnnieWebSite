@@ -1,0 +1,15 @@
+<div>
+  <div class="modal photography-modal fade custom-fade" id="photographyModal" role="dialog">
+    <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="modal-dialog photography-modal-dialog zoomIn animated" *ngIf="selectedPhotography" role="document">
+      <img [src]="selectedPhotography.location" alt="{{selectedPhotography.fileName}}" class="photography-image-modal">
+    </div>
+  </div>
+  <div class="photographies-wrapper">
+    <img *ngFor="let photography of photographies" [src]="photography.location" alt="{{photography.fileName}}" class="photography-image"
+      (click)="setSelectedPhotography(photography)" data-toggle="modal" data-target="#photographyModal" [ngClass]="{'image-miniature-active' : isHoveredPhotography(photography)}"
+      (mouseover)="setHoveredPhotography(photography)" (mouseout)="setHoveredPhotography(null)">
+  </div>
+</div>

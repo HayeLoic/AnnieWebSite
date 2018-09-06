@@ -1,4 +1,4 @@
-import { Image } from "./image";
+import { Image } from "../image/image";
 
 export class Project {
     id: number;
