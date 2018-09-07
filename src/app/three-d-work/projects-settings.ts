@@ -8,7 +8,7 @@ export class ProjectsSettings {
                 id: 1,
                 title: 'Moss',
                 description: 'This is Moss.',
-                repository: '../../assets/three-d-work/Moss/',
+                repository: 'assets/three-d-work/Moss/',
                 imageMiniature: new Image({fileName: 'moss.jpg'}),
                 images: [
                     new Image({ fileName: 'Plan_01_131216_0003.png' })
@@ -18,7 +18,7 @@ export class ProjectsSettings {
                 id: 2,
                 title: 'Scale',
                 description: 'This is Scale.',
-                repository: '../../assets/three-d-work/Scale/',
+                repository: 'assets/three-d-work/Scale/',
                 imageMiniature: new Image({fileName: 'scale.jpg'}),
                 images: [
                     new Image({ fileName: 'Render_0200.png' }),
@@ -33,7 +33,7 @@ export class ProjectsSettings {
                 id: 3,
                 title: 'Infime',
                 description: 'This is Infime.',
-                repository: '../../assets/three-d-work/Infime/',
+                repository: 'assets/three-d-work/Infime/',
                 imageMiniature: new Image({fileName: 'infime.jpg'}),
                 images: [
                     new Image({ fileName: 'infime_photos.0312.jpg' }),
@@ -51,7 +51,7 @@ export class ProjectsSettings {
                 id: 4,
                 title: 'Là Où Tu Es',
                 description: 'This is Là Où Tu Es.',
-                repository: '../../assets/three-d-work/LaOuTuEs/',
+                repository: 'assets/three-d-work/LaOuTuEs/',
                 imageMiniature: new Image({fileName: 'la_ou_tu_es.jpg'}),
                 images: [
                     new Image({ fileName: 'la_ou_tu_es01.jpg' }),
