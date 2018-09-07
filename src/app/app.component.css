@@ -29,6 +29,10 @@
     .author-block-for-other-screens {
         display: none;
     }
+
+    .custom-footer {
+        display: none;
+    }
 }
 
 @media (min-width:992px)  { 
@@ -38,5 +42,9 @@
 
     .author-block-for-other-screens {
         display: block;
+    }
+
+    .custom-footer {
+        height: 40px;
     }
 }
