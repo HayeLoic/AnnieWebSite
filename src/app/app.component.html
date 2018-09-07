@@ -1,17 +1,36 @@
 <nav class="navbar navbar-dark navbar-custom navbar-expand-lg">
-  <a class="navbar-brand" routerLink="/home">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <div class="author-block author-block-for-smartphone">
+    <div class="author-name">
+      Annie Hua
+    </div>
+    <div>
+      Lighting Artist
+    </div>
+  </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul id="navLinkList" class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" routerLink="/3d-work">3D Work</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/photography">Photography</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about-contact">About / Contact</a>
+      </li>
     </ul>
+  </div>
+  <div class="author-block author-block-for-other-screens">
+    <div class="author-name">
+      Annie Hua
+    </div>
+    <div>
+      Lighting Artist
+    </div>
   </div>
 </nav>
 <router-outlet></router-outlet>
