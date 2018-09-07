@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { PhotographiesSettings } from './photographies-settings';
 import { Image } from '../image/image';
 
@@ -13,6 +13,7 @@ export class PhotographyComponent implements OnInit {
   photographiesRepository = 'assets/photography/';
   selectedPhotography = null;
   hoveredPhotography = null;
+  isGoToTopButtonHidden = true;
 
   setImagesLocation(images: Image[], repository: string): Image[] {
     for (let image of images) {
@@ -31,6 +32,20 @@ export class PhotographyComponent implements OnInit {
 
   isHoveredPhotography(photography: Image): boolean {
     return this.hoveredPhotography == photography;
+  }
+
+  goToTop(): void {
+    document.body.scrollTop = 0; //Safari
+    document.documentElement.scrollTop = 0;
+  }
+
+  @HostListener('window:scroll', ['$event']) 
+  scrollHandler(event) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      this.isGoToTopButtonHidden = false;
+    } else {
+      this.isGoToTopButtonHidden = true;
+    }
   }
 
   constructor() { }
