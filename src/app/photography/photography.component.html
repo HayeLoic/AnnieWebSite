@@ -12,4 +12,7 @@
       (click)="setSelectedPhotography(photography)" data-toggle="modal" data-target="#photographyModal" [ngClass]="{'image-miniature-active' : isHoveredPhotography(photography)}"
       (mouseover)="setHoveredPhotography(photography)" (mouseout)="setHoveredPhotography(null)">
   </div>
+  <span (click)="goToTop()" class="go-to-top-button" [ngClass]="{'d-none' : isGoToTopButtonHidden}" title="Go to top">
+    <i class="fa fa-arrow-circle-up fa-2x go-to-top-icon"></i>
+  </span>
 </div>
