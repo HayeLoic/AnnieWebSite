@@ -10,7 +10,7 @@ import { Image } from '../image/image';
 export class PhotographyComponent implements OnInit {
 
   photographies = null;
-  photographiesRepository = '../../assets/photography/';
+  photographiesRepository = 'assets/photography/';
   selectedPhotography = null;
   hoveredPhotography = null;
 
