@@ -2,11 +2,19 @@
     background-color: #0d0c0d;
 }
 
-#navLinkList .nav-link {
+.nav-item-custom a,
+.nav-item-custom a:visited {
     color: rgba(255,215,0,0.8);
+    font-weight: normal;
 }
 
-#navLinkList :hover {
+.nav-item-custom a:focus,
+.nav-item-custom a:hover {
+    color: rgba(255,215,0,1);
+    font-weight: bold;
+}
+
+.nav-item-active a {
     color: rgba(255,215,0,1);
     font-weight: bold;
 }
