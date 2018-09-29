@@ -11,7 +11,8 @@ export class ProjectsSettings {
                 repository: '/assets/three-d-work/Infime/',
                 imageMiniature: new Image({ fileName: 'infime_miniature.jpg' }),
                 images: [
-                ]
+                ],
+                vimeoLink: 'https://player.vimeo.com/video/54085888?color=ffffff&byline=0&portrait=0'
             }),
             new Project({
                 id: 2,
@@ -22,7 +23,8 @@ export class ProjectsSettings {
                 images: [
                     new Image({ fileName: 'la_ou_tu_es_01.jpg' }),
                     new Image({ fileName: 'la_ou_tu_es_02.jpg' })
-                ]
+                ],
+                vimeoLink: ''
             }),
             new Project({
                 id: 3,
@@ -32,7 +34,8 @@ export class ProjectsSettings {
                 imageMiniature: new Image({ fileName: 'moss_miniature.jpg' }),
                 images: [
                     new Image({ fileName: 'moss.jpg' })
-                ]
+                ],
+                vimeoLink: ''
             }),
             new Project({
                 id: 4,
@@ -44,7 +47,8 @@ export class ProjectsSettings {
                     new Image({ fileName: 'scale_01.jpg' }),
                     new Image({ fileName: 'scale_02.jpg' }),
                     new Image({ fileName: 'scale_03.jpg' })
-                ]
+                ],
+                vimeoLink: ''
             })
         ];
     }
