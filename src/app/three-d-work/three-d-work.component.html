@@ -9,7 +9,13 @@
     <div>
       {{selectedProject.description}}
     </div>
-    <div id="carousel-indicators" class="carousel slide" data-ride="carousel" data-interval="false">
+    <div *ngIf="selectedProject.vimeoLink" class="video-iframe-container">
+      <iframe [src]="selectedProject.vimeoLinkSafeResourceUrl" class="video-iframe" frameborder="0"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+    <div *ngIf="selectedProject.images && selectedProject.images.length > 0" id="carousel-indicators" class="carousel slide"
+      data-ride="carousel" data-interval="false">
       <ol class="carousel-indicators">
         <li *ngFor="let image of selectedProject.images" data-target="#carousel-indicators" [attr.data-slide-to]="selectedProject.images.indexOf(image)"
           [ngClass]="{'active' : selectedProject.images.indexOf(image)==0}"></li>
@@ -34,7 +40,8 @@
   <div class="row all-miniatures-wrapper">
     <div *ngFor="let project of projects" (click)="setSelectedProject(project)" class="col-3 col-md-2 image-miniature-wrapper">
       <img [src]="project.imageMiniature.location" alt="{{project.title}}" class="image-miniature" [ngClass]="{'image-miniature-active' : isSelectedOrHoveredProject(project)}"
-      [ngClass]="{'image-miniature-active' : isSelectedOrHoveredProject(project)}" (mouseover)="setHoveredProject(project)" (mouseout)="setHoveredProject(null)">
+        [ngClass]="{'image-miniature-active' : isSelectedOrHoveredProject(project)}" (mouseover)="setHoveredProject(project)"
+        (mouseout)="setHoveredProject(null)">
     </div>
   </div>
 </div>
