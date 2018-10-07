@@ -4,6 +4,11 @@ body{
     font-family: 'Raleway', 'Calibri'
 }
 
+.page-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .page-container{
     margin-top: 10px;
 }
