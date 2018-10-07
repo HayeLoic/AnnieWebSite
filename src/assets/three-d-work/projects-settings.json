@@ -1,0 +1,23 @@
+[
+    {
+        "id": 3,
+        "title": "Scale",
+        "description": "Scale",
+        "repository": "/assets/three-d-work/Scale/",
+        "imageMiniature": {
+            "fileName": "scale_01.jpg"
+        },
+        "images": [
+            {
+                "fileName": "scale_01.jpg"
+            },
+            {
+                "fileName": "scale_02.jpg"
+            },
+            {
+                "fileName": "scale_03.jpg"
+            }
+        ],
+        "vimeoLink": "https://player.vimeo.com/video/101857170?color=ffffff&byline=0&portrait=0"
+    }
+]
