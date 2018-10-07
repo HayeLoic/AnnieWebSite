@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { PhotographiesSettings } from './photographies-settings';
 import { Image } from '../image/image';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-photography',
@@ -8,9 +9,9 @@ import { Image } from '../image/image';
   styleUrls: ['./photography.component.css']
 })
 export class PhotographyComponent implements OnInit {
-
   photographies = null;
-  photographiesRepository = 'assets/photography/';
+  photographiesRepository :string = 'assets/photography/';
+  photographiesSettingsFileName: string = 'photographies-settings.json';
   selectedPhotography = null;
   hoveredPhotography = null;
   isGoToTopButtonHidden = true;
@@ -39,7 +40,7 @@ export class PhotographyComponent implements OnInit {
     document.documentElement.scrollTop = 0;
   }
 
-  @HostListener('window:scroll', ['$event']) 
+  @HostListener('window:scroll', ['$event'])
   scrollHandler(event) {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       this.isGoToTopButtonHidden = false;
@@ -48,10 +49,15 @@ export class PhotographyComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  getPhotographies(): Observable<any> {
+    return this.http.get(this.photographiesRepository + this.photographiesSettingsFileName);
+  }
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.photographies = PhotographiesSettings.GetPhotographies();
-    this.setImagesLocation(this.photographies, this.photographiesRepository);
+    this.getPhotographies().subscribe(
+      photographiesJson => this.photographies = this.setImagesLocation(photographiesJson, this.photographiesRepository)
+    );
   }
 }
