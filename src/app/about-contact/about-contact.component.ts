@@ -12,4 +12,10 @@ export class AboutContactComponent implements OnInit {
   ngOnInit() {
   }
 
+  vimeoLink: string = 'http://vimeo.com/anniehua';
+  vimeoTooltip: string = 'Watch my other videos on Vimeo';
+  linkedInLink: string = 'http://fr.linkedin.com/in/anniehua3d';
+  linedInTooltip: string = 'View my professional profile on LinkedIn';
+  gmailLink: string = 'mailto:anniehua.contact@gmail.com';
+  gmailTooltip: string = 'Contact me';
 }
