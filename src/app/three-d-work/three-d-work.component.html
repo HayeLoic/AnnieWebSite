@@ -9,11 +9,7 @@
     <div>
       {{selectedProject.description}}
     </div>
-    <div *ngIf="selectedProject.vimeoLink" class="video-iframe-container">
-      <iframe [src]="selectedProject.vimeoLinkSafeResourceUrl" class="video-iframe" frameborder="0"
-        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      <script src="https://player.vimeo.com/api/player.js"></script>
-    </div>
+    
     <div *ngIf="selectedProject.images && selectedProject.images.length > 0" id="carousel-indicators" class="carousel slide"
       data-ride="carousel" data-interval="false">
       <ol class="carousel-indicators">
@@ -33,6 +29,11 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+    </div>
+    <div *ngIf="selectedProject.vimeoLink" class="video-iframe-container">
+      <iframe [src]="selectedProject.vimeoLinkSafeResourceUrl" class="video-iframe" frameborder="0"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
   </div>
 </div>
