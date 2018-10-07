@@ -1,15 +1,14 @@
 <div class="container page-container">
-  <h2>
+  <h2 class="page-title">
     Personnal and professional 3D work
   </h2>
   <div *ngIf="selectedProject">
     <h4>
       {{selectedProject.title}}
     </h4>
-    <div>
+    <div class="project-description">
       {{selectedProject.description}}
     </div>
-    
     <div *ngIf="selectedProject.images && selectedProject.images.length > 0" id="carousel-indicators" class="carousel slide"
       data-ride="carousel" data-interval="false">
       <ol class="carousel-indicators">
