@@ -1,23 +1,156 @@
 [
-    {
-        "id": 3,
-        "title": "Scale",
-        "description": "Scale",
-        "repository": "/assets/three-d-work/Scale/",
-        "imageMiniature": {
-            "fileName": "scale_01.jpg"
-        },
-        "images": [
-            {
-                "fileName": "scale_01.jpg"
-            },
-            {
-                "fileName": "scale_02.jpg"
-            },
-            {
-                "fileName": "scale_03.jpg"
-            }
-        ],
-        "vimeoLink": "https://player.vimeo.com/video/101857170?color=ffffff&byline=0&portrait=0"
-    }
+  {
+    "id": 1,
+    "title": "Moss",
+    "description": "Personnal project. 2014",
+    "repository": "/assets/three-d-work/Moss/",
+    "imageMiniature": {
+      "fileName": "moss_miniature.jpg",
+      "location": ""
+    },
+    "images": [
+      {
+        "fileName": "moss.jpg",
+        "location": ""
+      }
+    ],
+    "vimeoLink": null
+  },
+  {
+    "id": 2,
+    "title": "Infime",
+    "description": "Short film made at Cut and Cook Studio. Position : CG generalist (modeling, sculpting, surfacing, lighting).  2012",
+    "repository": "/assets/three-d-work/Infime/",
+    "imageMiniature": {
+      "fileName": "infime_miniature.jpg",
+      "location": ""
+    },
+    "images": [],
+    "vimeoLink": "https://player.vimeo.com/video/54085888?color=ffffff&byline=0&portrait=0"
+  },
+  {
+    "id": 3,
+    "title": "Scale",
+    "description": "Short film made with Ouirich Bounthavy, Arthur Graff and Kevin Monnier. Role: modeling, sculpting, surfacing, lighting. 2014",
+    "repository": "/assets/three-d-work/Scale/",
+    "imageMiniature": {
+      "fileName": "scale_miniature.jpg",
+      "location": null
+    },
+    "images": [
+      {
+        "fileName": "scale_01.jpg",
+        "location": null
+      },
+      {
+        "fileName": "scale_02.jpg",
+        "location": null
+      },
+      {
+        "fileName": "scale_03.jpg",
+        "location": null
+      }
+    ],
+    "vimeoLink": "https://player.vimeo.com/video/101857170?color=ffffff&byline=0&portrait=0"
+  },
+  {
+    "id": 4,
+    "title": "Là Où Tu Es",
+    "description": "School project, made with Ouirich Bounthavy and Damien Picard. Role : modeling, surfacing, lighting. 2013",
+    "repository": "/assets/three-d-work/LaOuTuEs/",
+    "imageMiniature": {
+      "fileName": "la_ou_tu_es_miniature.jpg",
+      "location": ""
+    },
+    "images": [
+      {
+        "fileName": "la_ou_tu_es_01.jpg",
+        "location": ""
+      },
+      {
+        "fileName": "la_ou_tu_es_02.jpg",
+        "location": ""
+      }
+    ],
+    "vimeoLink": null
+  },
+  {
+    "id": 5,
+    "title": "Chambre",
+    "description": "Personnal project. 2012",
+    "repository": "/assets/three-d-work/Chambre/",
+    "imageMiniature": {
+      "fileName": "chambre_miniature.jpg",
+      "location": ""
+    },
+    "images": [
+      {
+        "fileName": "chambre_01.png",
+        "location": ""
+      },
+      {
+        "fileName": "chambre_02.png",
+        "location": ""
+      },
+      {
+        "fileName": "chambre_03.png",
+        "location": ""
+      },
+      {
+        "fileName": "chambre_04.png",
+        "location": ""
+      },
+      {
+        "fileName": "chambre_05.png",
+        "location": ""
+      },
+      {
+        "fileName": "chambre_06.png",
+        "location": ""
+      },
+      {
+        "fileName": "chambre_07.png",
+        "location": ""
+      },
+      {
+        "fileName": "chambre_08.png",
+        "location": ""
+      }
+    ],
+    "vimeoLink": null
+  },
+  {
+    "id": 6,
+    "title": "Matin",
+    "description": "Short film, made with Virginie Izoulet and Oriana Kacimi. Role : photography, compositing. 2012",
+    "repository": "/assets/three-d-work/Matin/",
+    "imageMiniature": {
+      "fileName": "matin_miniature.jpg",
+      "location": ""
+    },
+    "images": [
+      {
+        "fileName": "matin_09.png",
+        "location": ""
+      }
+    ],
+    "vimeoLink": "https://player.vimeo.com/video/39236876?color=ffffff&byline=0&portrait=0"
+  },
+  {
+    "id": 7,
+    "title": "Robot",
+    "description": "Modeling, shading and lighting exercise. 2012",
+    "repository": "/assets/three-d-work/Robot/",
+    "imageMiniature": {
+      "fileName": "robot_miniature.jpg",
+      "location": ""
+    },
+    "images": [
+      {
+        "fileName": "robot.jpg",
+        "location": ""
+      }
+    ],
+    "vimeoLink": null
+  }
 ]
