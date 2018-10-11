@@ -16,6 +16,7 @@ export class AboutContactComponent implements OnInit {
   vimeoTooltip: string = 'Watch my other videos on Vimeo';
   linkedInLink: string = 'http://fr.linkedin.com/in/anniehua3d';
   linedInTooltip: string = 'View my professional profile on LinkedIn';
-  gmailLink: string = 'mailto:anniehua.contact@gmail.com';
+  gmailAddress: string = 'anniehua.contact@gmail.com';
+  gmailLink: string = 'mailto:' + this.gmailAddress;
   gmailTooltip: string = 'Contact me';
 }
