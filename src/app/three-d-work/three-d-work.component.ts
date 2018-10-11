@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from './project'
-import { ProjectsSettings } from './projects-settings';
 import { DomSanitizer } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-three-d-work',
@@ -11,10 +12,12 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 export class ThreeDWorkComponent implements OnInit {
   projects = null;
+  projectsRepository: string = 'assets/three-d-work/';
+  projectsSettingsFileName: string = 'projects-settings.json';
   selectedProject = null;
   hoveredProject = null;
 
-  constructor(public sanitizer: DomSanitizer) { }
+  constructor(public sanitizer: DomSanitizer, private http: HttpClient) { }
 
   setImageLocation(project: Project): Project {
     for (let image of project.images) {
@@ -48,9 +51,19 @@ export class ThreeDWorkComponent implements OnInit {
     return this.selectedProject == project || this.hoveredProject == project;;
   }
 
+  getProjects(): Observable<any> {
+    return this.http.get(this.projectsRepository + this.projectsSettingsFileName);
+  }
+
+  initializeProjects(projects: Project[]): Project[] {
+    let initializedProjects: Project[] = this.sortProjectsById(projects);
+    this.prepareProjects(initializedProjects);
+    return initializedProjects;
+  }
+
   ngOnInit() {
-    this.projects = ProjectsSettings.GetProjects();
-    this.projects = this.sortProjectsById(this.projects);
-    this.prepareProjects(this.projects);
+    this.getProjects().subscribe(
+      projectsJson => this.projects = this.initializeProjects(projectsJson)
+    );
   }
 }
