@@ -11,12 +11,17 @@
       <span class="fab fa-vimeo"></span>
     </a>
     <span class="btn-social-separator"></span>
-    <a class="btn btn-social-icon btn-linkedin" [href]="vimeoLink" target="_blank" placement="top" [ngbTooltip]="linedInTooltip">
+    <a class="btn btn-social-icon btn-linkedin" [href]="linkedInLink" target="_blank" placement="top" [ngbTooltip]="linedInTooltip">
       <span class="fab fa-linkedin"></span>
     </a>
     <span class="btn-social-separator"></span>
     <a class="btn btn-social-icon btn-google" [href]="gmailLink" placement="top" [ngbTooltip]="gmailTooltip">
       <span class="fas fa-envelope"></span>
     </a>
+    <span class="btn-social-separator"></span>
+    <span class="email-address-for-other-screens">{{gmailAddress}}</span>
+  </div>
+  <div>
+    <span class="email-address-for-smartphone">{{gmailAddress}}</span>
   </div>
 </div>

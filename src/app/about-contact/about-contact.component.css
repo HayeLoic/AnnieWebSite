@@ -6,3 +6,23 @@
 .btn-social-separator {
     margin-left: 10px;
 }
+
+@media (max-width:992px)  { 
+    .email-address-for-smartphone {
+        display: block;
+    }
+
+    .email-address-for-other-screens {
+        display: none;
+    }
+}
+
+@media (min-width:992px)  { 
+    .email-address-for-smartphone {
+        display: none;
+    }
+
+    .email-address-for-other-screens {
+        display: inline;
+    }
+}
