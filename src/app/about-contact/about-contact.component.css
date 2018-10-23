@@ -7,6 +7,10 @@
     margin-left: 10px;
 }
 
+.email-address-for-smartphone {
+    margin-bottom: 20px;
+}
+
 @media (max-width:992px)  { 
     .email-address-for-smartphone {
         display: block;
